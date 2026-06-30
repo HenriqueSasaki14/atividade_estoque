@@ -53,7 +53,7 @@ app.delete ('/produtos/:id', async (req, res) => {
         const deleteProduto = await prisma.Produto.delete({
             where: {id: Number(id)}
         });
-        res.status(200).json("macaco apagado com sucesso");
+        res.status(204).json("macaco apagado com sucesso");
     }
     catch(error){
         res.status(400).json("chimpa não apagado!");
